@@ -81,7 +81,7 @@ namespace ApiClient
 
             var result = await client.PostAsync(baseUrl, content);
 
-            if(result.StatusCode == HttpStatusCode.Forbidden)
+            if(result.StatusCode == HttpStatusCode.Conflict)
             {
                 Console.WriteLine("Entry already exists!\n");
             }
